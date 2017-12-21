@@ -14,12 +14,12 @@
 		var height = window.innerHeight - 10;
 		var width = height;
 		
-		console.log(height);
+		//console.log(height);
 		
 		document.body.style.background = "#d2d2d2";
 		
-		var canvas = document.getElementById("myCanvas");
-		canvas.width = width;
+		var canvas = document.getElementById("RendererCanvas");
+		canvas.width = height;
 		canvas.height = height;
 		canvas.tabindex = 0;
 		canvas.setAttribute('style', "  position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); border:2px solid blue");
@@ -117,35 +117,47 @@
 					
 				});
 				
-			 document.addEventListener('keydown', onKeyDown, false);
-			 document.addEventListener('keyup', onKeyUp, false);
+			
+
 		}	
 		
-		function onKeyDown(event) {
-			var key = event.keyCode;
-			if(key === 37){
-				turn_left = true;
-			}
-			if(key === 39){
+		var onKeyDown = function ( event ) {
+
+			switch ( event.keyCode ) {
+			
+				case 37:
+                turn_left = true;
+                break;
+				
+				case 39:
 				turn_right = true;
+				break;
 			}
-		}
+		};
 		
-		function onKeyUp(event) {
-			var key = event.keyCode;
-			if(key === 37){
-				turn_left = false;
-			}
-			if(key === 39){
+		var onKeyUp = function ( event ) {
+
+			switch ( event.keyCode ) {
+			
+				case 37:
+                turn_left = false;
+                break;
+				
+				case 39:
 				turn_right = false;
+				break;
 			}
-		}
+		};
+		
+
+		document.addEventListener('keydown', onKeyDown, false);
+			document.addEventListener('keyup', onKeyUp, false);
 
 		function render() {
 			requestAnimationFrame( render );
 			renderer.setViewport( 0, 0, width, width );
 			renderer.clear();
-
+			
 			if (RESOURCES_LOADED){
 				if(turn_left){
 					model.rotation.y += .02;
