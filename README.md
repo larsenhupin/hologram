@@ -1,12 +1,13 @@
 # Hologram
 
 Hologram is a script for displaying hologram using inverse plexiglass pyramid.</br>
-To see in action: </br>
-  https://hackerspacecowboy.net/graphics/hologram/code/hologram.html
+https://hackerspacecowboy.net/graphics/hologram/code/hologram.html
 
 # Installation
 
-Use on a local server
+Clone the repository.</br>
+Start a local server on your machine</br></br>
+Exemple: py -3 -m http.server 9000
 
 # Credit & License
 
