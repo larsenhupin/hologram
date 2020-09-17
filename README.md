@@ -7,7 +7,7 @@ https://hackerspacecowboy.net/graphics/hologram/code/hologram.html
 
 Clone the repository.</br>
 Start a local server on your machine</br></br>
-Exemple: py -3 -m http.server 9000
+Exemple: `py -3 -m http.server 9000`
 
 # Credit & License
 
