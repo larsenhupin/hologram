@@ -1,4 +1,4 @@
-# hologram
+# Hologram
 
 Hologram is a script for displaying hologram using inverse plexiglass pyramid.</br>
 To see in action: </br>
